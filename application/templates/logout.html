@@ -1,0 +1,12 @@
+
+{% extends "base.html"%} 
+{% load static %} 
+{% load crispy_forms_tags %}
+{% block body_content %}
+<div style="min-height: 100vh;">
+  <div class="text-center">
+    <h1>Logout successful</h1>
+    <p><a href="{% url 'login' %}">Click here</a> to Login</p>
+  </div>
+</div>
+  {% endblock  %}

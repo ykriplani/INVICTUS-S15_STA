@@ -1,0 +1,88 @@
+{% extends "base.html"%} 
+{% load static %} 
+{% block body_content %}
+
+<div id="carouselExampleIndicators" class="carousel slide container" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li
+      data-target="#carouselExampleIndicators"
+      data-slide-to="0"
+      class="active"
+    ></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        class="d-block w-100"
+        src="{% static 'images/4.jpeg' %}"
+        alt="First slide"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        class="d-block w-100"
+        src="{% static 'images/2.jpeg' %}"
+        alt="Second slide"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        class="d-block w-100"
+        src="{% static 'images/3.jpeg' %}"
+        alt="Third slide"
+      />
+    </div>
+  </div>
+  <a
+    class="carousel-control-prev"
+    href="#carouselExampleIndicators"
+    role="button"
+    data-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a
+    class="carousel-control-next"
+    href="#carouselExampleIndicators"
+    role="button"
+    data-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  <hr />
+</div>
+<div class="bg-light">
+<div>
+    <h1 style="font-family: 'Times New Roman', Times, serif;font: Arial, sans-serif;color:#95060c" ><center>Menstruation and Menstrual Hygiene<center></h1>
+        <p>In the world’s second most populous country with nearly 355 million menstruating women, 23% of adolescent girls drop out of school after their first period. Only 12% of females in the country use sanitary pads. 10% of girls in India believe that menstruation is a disease [1]!
+<br>
+<br>
+    While ‘faeces’ and ‘urine’ have become mainstream, the topic of menstruation still remains taboo. So, what is menstruation? Why do females have to go through this monthly ritual for decades?</p>
+</div>
+
+<div>
+    <h4> Here are answers to some of the more pertinent questions on adolescence and menstruation (FAQs)</h4>
+    
+    <h5>1. Does having your period smell?    </h5>
+    <p>It shouldn’t! Menstrual odor happens when menstrual fluid comes in contact with air. When menstrual fluid is absorbed within the vagina, like through a tampon, it is not exposed to the air, so there shouldn’t be an odor. If you’re feeling worried, just be sure to change your pads and tampons frequently to help keep odor at bay.</p>
+    <br>
+    <h5>2. Does having your period hurt?</h5>
+    <p>Menstruation itself doesn’t hurt, but some girls and women get cramps or other symptoms during their periods that may be uncomfortable. This is typically due to the hormones your body releases during menstruation that cause the uterus to contract so it can shed it’s lining.</p>
+    <br>
+    <h5>3. What is a period and why do we have them?</h5>
+    <p>A period is when a woman’s body releases tissue it no longer needs. This tissue comes from the uterus, which is where a baby (fetus) can develop in the female body. Every month or so, the uterus lining gets thicker to prepare for a fertilized egg if the woman becomes pregnant. If the egg doesn’t get fertilized, that lining is released from the body as blood through the vagina. This monthly process is called menstruation or a period.So when a girl has her period, her body is just getting rid of a small amount of blood and some unneeded tissue. It is a natural, normal body process for all females as they become women and mature physically.</p>
+    <br>
+    <h5>4. What does a period feel like?</h5>
+    <p>The actual flow of your period doesn’t feel like much when it’s happening. Chances are, you won’t even feel it coming out. When you actually start your period, you may feel some dampness in your private area — this may be caused by a few spots of blood on your underwear.</p>
+    <br>
+    <h5>5. Is there anything I won’t be able to do when I have my period?</h5>
+    <p>Your period doesn’t have to stop you from doing things you usually do. You can still go to school, help at home, see your friends, play sports and do all the things you’d normally do.Tip: See the whole line of Always products so you can pick the best fit for your lifestyle and flow.</p>
+</div>
+</div>
+
+{% endblock %}
+
