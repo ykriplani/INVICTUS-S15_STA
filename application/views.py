@@ -20,6 +20,9 @@ def aub(request):
 def about(request):
     return render(request,'data/about.html')
 
+def consulting(request):
+    return render(request,'consulting.html')
+
 
 
 def contact(request):
