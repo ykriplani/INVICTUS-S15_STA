@@ -42,3 +42,15 @@ class Contact(models.Model):
     class Meta:
         verbose_name_plural = "Feedbacks"
 
+class Message(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    body = models.TextField()
+    res = models.TextField(null=True)
+    updated = models.DateTimeField(auto_now=True)
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-updated', 'created']
+
+    def __str__(self):
+        return self.body[:50]

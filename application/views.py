@@ -6,7 +6,22 @@ from django.views.generic import CreateView
 from .forms import RegisterForm,ContactForm
 from django.contrib.auth import get_user_model
 from django.contrib import messages
+import requests
+from requests import get
+from .models import Message
 # Create your views here.
+
+def chat(request):
+    user = request.user
+    user_messages = user.message_set.all().order_by('-created')
+    if request.method == 'POST':
+        body = request.POST.get('msg')
+        url = "http://api.brainshop.ai/get?bid=157984&key=3S0hhLXZ5GS2KYs4&uid=[uid]&msg=[{}]".format(body)
+        response = requests.get(url).json()['cnt']
+        message = Message.objects.create(user=user, body=body, res=response)
+        # return redirect('chat')
+    context = {'user_messages': user_messages}
+    return render(request, 'chat.html', context)
 
 def home(request):
     return render(request,'home.html')
