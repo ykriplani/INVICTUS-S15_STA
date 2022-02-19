@@ -8,9 +8,6 @@ from django.shortcuts import redirect
 from django.urls import reverse
 # Create your models here.
 class CustomUser(AbstractUser):
-
-    
-
     class GenderChoices(models.TextChoices):
         MALE = 'm'
         FEMALE = 'f'
@@ -27,4 +24,21 @@ class CustomUser(AbstractUser):
     
     def get_absolute_url(self):
         return reverse("home")
+
+
+
+class Contact(models.Model):
+
+    first_name = models.CharField(max_length = 50)
+    last_name = models.CharField(max_length = 50)
+    subject = models.CharField(max_length = 50)
+    email_address = models.EmailField(max_length = 150)
+    message = models.TextField()
+
+
+    def __str__(self) -> str:
+        return self.first_name+"-"+self.subject
+
+    class Meta:
+        verbose_name_plural = "Feedbacks"
 

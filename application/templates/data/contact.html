@@ -1,5 +1,23 @@
+
 {% extends "base.html"%} 
 {% load static %} 
+{% load crispy_forms_tags %}
 {% block body_content %}
-write here body part
-{% endblock %}
+<div style="min-height: 100vh;">
+  <div class="row justify-content-center" style="min-height: 100vh;">
+      <br>
+      <h2>Any Questions?? We'd love to answer you.</h2>
+      <p>We're happy to answer your questions or provide you an estimate.
+        Do write us by filling the below form with any questions you may have.</p>
+      <div class="col-md-6">
+        <form action="" method="POST">
+          {% csrf_token %}
+          {{form|crispy}}
+          <button class="btn btn-block btn-primary">Submit</button>
+        </form>
+        <hr>
+        
+      </div>
+  </div>
+</div>
+  {% endblock  %}
