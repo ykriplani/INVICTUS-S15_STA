@@ -16,6 +16,13 @@ def pcod(request):
 def aub(request):
     return render(request,'data/aub.html')
 
+def about(request):
+    return render(request,'data/about.html')
+
+def contact(request):
+    return render(request,'data/contact.html')
+
+
 class RegisterView(SuccessMessageMixin, CreateView):
 
     template_name = 'register.html'
